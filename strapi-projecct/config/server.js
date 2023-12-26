@@ -7,4 +7,9 @@ module.exports = ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
+  middleware: {
+    session: {
+      secret: env('SESSION_SECRET', '29d33fae0bff833f07d361e8e2b890e61ad918ca517dece4f90e214e4137a2f484a4b0d2f9526d77c160a19c17fbd500a98c25f4b6eeb0370bbc5cfec6932306'),
+    },
+  },
 });
